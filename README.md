@@ -51,7 +51,8 @@ Threat_detection/
 └── README.md
 
 
-Setup
+Setup for project
+
 1. Clone the repository
 git clone https://github.com/MinakshiGadpalli/Threat-Intelligence-Platform.git
 cd Threat_detection
