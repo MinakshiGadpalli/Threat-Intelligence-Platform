@@ -1,4 +1,4 @@
-# Threat Intelligence Platform (Week 1 & Week 2)
+# Threat Intelligence Platform 
 
 ## Overview
 This project is a beginner-friendly Threat Intelligence Platform (TIP) built using Python, MongoDB, and VirusTotal.
