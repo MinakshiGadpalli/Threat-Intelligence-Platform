@@ -1,6 +1,8 @@
 # 🚀 Threat Detection Platform
 
-A Cybersecurity Threat Detection Platform that collects, processes, and analyzes threat intelligence data using external APIs and stores it in a structured format for further analysis and visualization.
+A Cybersecurity Threat Detection Platform that collects, processes, and analyzes threat intelligence data using external APIs and stores it in a structured format for further analysis and visualization.This project is a beginner-friendly Threat Intelligence Platform (TIP) built using Python, MongoDB, and VirusTotal.It collects threat intelligence from VirusTotal, extracts malicious IP reputation data, removes duplicate entries, stores clean threat records, and performs risk scoring for security analysis.
+
+The project is being developed in phases as part of an internship.
 
 ---
 
