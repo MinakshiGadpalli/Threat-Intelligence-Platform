@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Detection Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #1e293b;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #2563eb;
+        }
+        tr:nth-child(even) {
+            background: #1e293b;
+        }
+        tr:nth-child(odd) {
+            background: #0f172a;
+        }
+        .high { color: red; font-weight: bold; }
+        .medium { color: orange; font-weight: bold; }
+        .low { color: lightgreen; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Threat Detection Platform Dashboard</h1>
+
+    <h2>Threat Intelligence</h2>
+    <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Malicious Score</th>
+            <th>Risk Level</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for threat in threats %}
+        <tr>
+            <td>{{ threat.ip }}</td>
+            <td>{{ threat.malicious_score }}</td>
+            <td class="{{ threat.risk_level.lower() }}">{{ threat.risk_level }}</td>
+            <td>{{ threat.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Alerts</h2>
+    <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Risk Level</th>
+            <th>Message</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert.ip }}</td>
+            <td class="{{ alert.risk_level.lower() }}">{{ alert.risk_level }}</td>
+            <td>{{ alert.message }}</td>
+            <td>{{ alert.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
