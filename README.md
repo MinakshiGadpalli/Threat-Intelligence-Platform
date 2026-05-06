@@ -55,6 +55,9 @@ Threat_detection/
 │── risk_analysis.py
 │── normalize_data.py
 │── dashboard_data.py
+│── app.py
+│── alert_engine.py
+│── log_alerts.py
 │── requirements.txt
 │── .env
 ```
