@@ -42,6 +42,14 @@ This project builds a complete threat intelligence pipeline:
 - Dashboard-ready data output
 - Structured threat intelligence generation
 
+### Week 3: Alerting & Response Automation
+- Alert generation for suspicious IPs
+- Automated response simulation
+- Alert logging system
+- Threat response automation
+- MongoDB alert storage
+- SOC-style alert monitoring
+
 ---
 
 ## 📂 Project Structure
