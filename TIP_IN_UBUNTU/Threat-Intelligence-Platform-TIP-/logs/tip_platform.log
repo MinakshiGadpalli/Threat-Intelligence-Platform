@@ -1,0 +1,141 @@
+2026-05-03 15:31:43,375 [INFO] feed_collector: ============================================================
+2026-05-03 15:31:43,376 [INFO] feed_collector:   TIP Platform — OSINT Feed Collector (Week 1)
+2026-05-03 15:31:43,377 [INFO] feed_collector: ============================================================
+2026-05-03 15:31:43,404 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-03 15:31:43,408 [INFO] feed_collector: Registered: AlienVault OTX
+2026-05-03 15:31:43,410 [INFO] feed_collector: Registered: AbuseIPDB
+2026-05-03 15:31:43,410 [INFO] feed_collector: 2 collector(s) active
+2026-05-03 15:31:43,411 [INFO] feed_collector: [OTX] Starting collection...
+2026-05-03 15:31:44,993 [INFO] week1_osint.db_handler: Raw indicators — inserted: 193, updated: 7
+2026-05-03 15:31:45,050 [INFO] week1_osint.db_handler: Raw indicators — inserted: 200, updated: 0
+2026-05-03 15:31:45,118 [INFO] week1_osint.db_handler: Raw indicators — inserted: 199, updated: 1
+2026-05-03 15:31:47,294 [INFO] week1_osint.db_handler: Raw indicators — inserted: 191, updated: 9
+2026-05-03 15:31:49,339 [INFO] week1_osint.db_handler: Raw indicators — inserted: 190, updated: 10
+2026-05-03 15:31:49,395 [INFO] week1_osint.db_handler: Raw indicators — inserted: 191, updated: 9
+2026-05-03 15:31:51,764 [INFO] week1_osint.db_handler: Raw indicators — inserted: 193, updated: 7
+2026-05-03 15:31:51,839 [INFO] week1_osint.db_handler: Raw indicators — inserted: 197, updated: 3
+2026-05-03 15:31:51,909 [INFO] week1_osint.db_handler: Raw indicators — inserted: 190, updated: 10
+2026-05-03 15:31:55,101 [INFO] week1_osint.db_handler: Raw indicators — inserted: 195, updated: 5
+2026-05-03 15:31:55,235 [INFO] week1_osint.db_handler: Raw indicators — inserted: 183, updated: 17
+2026-05-03 15:31:55,352 [INFO] week1_osint.db_handler: Raw indicators — inserted: 199, updated: 1
+2026-05-03 15:31:55,856 [INFO] feed_collector: [OTX] Collected 2535 indicators
+2026-05-03 15:31:55,969 [INFO] week1_osint.db_handler: Raw indicators — inserted: 135, updated: 0
+2026-05-03 15:31:55,971 [INFO] feed_collector: [AbuseIPDB] Starting collection (confidence >= 75)...
+2026-05-03 15:31:57,106 [INFO] week1_osint.db_handler: Raw indicators — inserted: 200, updated: 0
+2026-05-03 15:31:57,217 [INFO] week1_osint.db_handler: Raw indicators — inserted: 200, updated: 0
+2026-05-03 15:31:57,221 [INFO] feed_collector: [AbuseIPDB] Collected 500 indicators
+2026-05-03 15:31:57,266 [INFO] week1_osint.db_handler: Raw indicators — inserted: 100, updated: 0
+2026-05-03 15:31:57,267 [INFO] feed_collector: Collection complete in 13.9s — inserted: 2956, updated: 79, errors: 0
+2026-05-03 15:31:57,364 [INFO] feed_collector: DB Stats: {'raw_indicators': 2956, 'normalized_indicators': 0, 'active_blocks': 0, 'audit_entries': 1, 'high_risk_pending': 0}
+2026-05-11 16:59:20,460 [INFO] feed_collector: ============================================================
+2026-05-11 16:59:20,461 [INFO] feed_collector:   TIP Platform — OSINT Feed Collector (Week 1)
+2026-05-11 16:59:20,462 [INFO] feed_collector: ============================================================
+2026-05-11 16:59:20,492 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-11 16:59:20,492 [INFO] feed_collector: Registered: AlienVault OTX
+2026-05-11 16:59:20,493 [INFO] feed_collector: Registered: AbuseIPDB
+2026-05-11 16:59:20,493 [INFO] feed_collector: 2 collector(s) active
+2026-05-11 16:59:20,495 [INFO] feed_collector: [OTX] Starting collection...
+2026-05-11 16:59:22,065 [INFO] week1_osint.db_handler: Raw indicators — inserted: 128, updated: 72
+2026-05-11 16:59:22,117 [INFO] week1_osint.db_handler: Raw indicators — inserted: 180, updated: 20
+2026-05-11 16:59:24,281 [INFO] week1_osint.db_handler: Raw indicators — inserted: 187, updated: 13
+2026-05-11 16:59:24,306 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:24,335 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:24,382 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:27,013 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:29,238 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:29,264 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:32,241 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:32,320 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 16:59:32,823 [INFO] feed_collector: [OTX] Collected 2341 indicators
+2026-05-11 16:59:32,917 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 141
+2026-05-11 16:59:32,919 [INFO] feed_collector: [AbuseIPDB] Starting collection (confidence >= 75)...
+2026-05-11 16:59:33,887 [INFO] week1_osint.db_handler: Raw indicators — inserted: 178, updated: 22
+2026-05-11 16:59:33,938 [INFO] week1_osint.db_handler: Raw indicators — inserted: 188, updated: 12
+2026-05-11 16:59:33,943 [INFO] feed_collector: [AbuseIPDB] Collected 500 indicators
+2026-05-11 16:59:33,997 [INFO] week1_osint.db_handler: Raw indicators — inserted: 91, updated: 9
+2026-05-11 16:59:33,998 [INFO] feed_collector: Collection complete in 13.5s — inserted: 952, updated: 1889, errors: 0
+2026-05-11 16:59:34,097 [INFO] feed_collector: DB Stats: {'raw_indicators': 3908, 'normalized_indicators': 2956, 'active_blocks': 501, 'audit_entries': 510, 'high_risk_pending': 40}
+2026-05-11 17:33:15,678 [INFO] feed_collector: ============================================================
+2026-05-11 17:33:15,680 [INFO] feed_collector:   TIP Platform — OSINT Feed Collector (Week 1)
+2026-05-11 17:33:15,680 [INFO] feed_collector: ============================================================
+2026-05-11 17:33:15,716 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-11 17:33:15,717 [INFO] feed_collector: Registered: AlienVault OTX
+2026-05-11 17:33:15,717 [INFO] feed_collector: Registered: AbuseIPDB
+2026-05-11 17:33:15,717 [INFO] feed_collector: 2 collector(s) active
+2026-05-11 17:33:15,718 [INFO] feed_collector: [OTX] Starting collection...
+2026-05-11 17:33:16,736 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:16,799 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:20,058 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:20,122 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:20,165 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:20,224 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:22,161 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:24,327 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:24,367 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:26,806 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:26,853 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:27,355 [INFO] feed_collector: [OTX] Collected 2341 indicators
+2026-05-11 17:33:27,422 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 141
+2026-05-11 17:33:27,424 [INFO] feed_collector: [AbuseIPDB] Starting collection (confidence >= 75)...
+2026-05-11 17:33:28,264 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:28,312 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:33:28,314 [INFO] feed_collector: [AbuseIPDB] Collected 500 indicators
+2026-05-11 17:33:28,342 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 100
+2026-05-11 17:33:28,344 [INFO] feed_collector: Collection complete in 12.6s — inserted: 0, updated: 2841, errors: 0
+2026-05-11 17:33:28,538 [INFO] feed_collector: DB Stats: {'raw_indicators': 3908, 'normalized_indicators': 3908, 'active_blocks': 501, 'audit_entries': 512, 'high_risk_pending': 995}
+2026-05-11 17:36:45,310 [INFO] feed_collector: ============================================================
+2026-05-11 17:36:45,311 [INFO] feed_collector:   TIP Platform — OSINT Feed Collector (Week 1)
+2026-05-11 17:36:45,311 [INFO] feed_collector: ============================================================
+2026-05-11 17:36:45,334 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-11 17:36:45,335 [INFO] feed_collector: Registered: AlienVault OTX
+2026-05-11 17:36:45,339 [INFO] feed_collector: Registered: AbuseIPDB
+2026-05-11 17:36:45,339 [INFO] feed_collector: 2 collector(s) active
+2026-05-11 17:36:45,340 [INFO] feed_collector: [OTX] Starting collection...
+2026-05-11 17:36:47,531 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:47,617 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:49,691 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:49,733 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:49,777 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:49,856 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:52,563 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:54,439 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:54,517 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:57,258 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:57,289 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:57,791 [INFO] feed_collector: [OTX] Collected 2341 indicators
+2026-05-11 17:36:57,927 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 141
+2026-05-11 17:36:57,929 [INFO] feed_collector: [AbuseIPDB] Starting collection (confidence >= 75)...
+2026-05-11 17:36:58,849 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:58,887 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:36:58,889 [INFO] feed_collector: [AbuseIPDB] Collected 500 indicators
+2026-05-11 17:36:58,916 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 100
+2026-05-11 17:36:58,916 [INFO] feed_collector: Collection complete in 13.6s — inserted: 0, updated: 2841, errors: 0
+2026-05-11 17:36:58,956 [INFO] feed_collector: DB Stats: {'raw_indicators': 3908, 'normalized_indicators': 3908, 'active_blocks': 500, 'audit_entries': 515, 'high_risk_pending': 994}
+2026-05-11 17:41:57,258 [INFO] feed_collector: ============================================================
+2026-05-11 17:41:57,259 [INFO] feed_collector:   TIP Platform — OSINT Feed Collector (Week 1)
+2026-05-11 17:41:57,259 [INFO] feed_collector: ============================================================
+2026-05-11 17:41:57,284 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-11 17:41:57,284 [INFO] feed_collector: Registered: AlienVault OTX
+2026-05-11 17:41:57,285 [INFO] feed_collector: Registered: AbuseIPDB
+2026-05-11 17:41:57,291 [INFO] feed_collector: 2 collector(s) active
+2026-05-11 17:41:57,294 [INFO] feed_collector: [OTX] Starting collection...
+2026-05-11 17:42:00,052 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:00,112 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:02,414 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:02,458 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:02,523 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:02,583 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:04,677 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:06,924 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:06,969 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:11,736 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:11,771 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:12,273 [INFO] feed_collector: [OTX] Collected 2341 indicators
+2026-05-11 17:42:12,300 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 141
+2026-05-11 17:42:12,301 [INFO] feed_collector: [AbuseIPDB] Starting collection (confidence >= 75)...
+2026-05-11 17:42:13,174 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:13,205 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 200
+2026-05-11 17:42:13,207 [INFO] feed_collector: [AbuseIPDB] Collected 500 indicators
+2026-05-11 17:42:13,226 [INFO] week1_osint.db_handler: Raw indicators — inserted: 0, updated: 100
+2026-05-11 17:42:13,227 [INFO] feed_collector: Collection complete in 15.9s — inserted: 0, updated: 2841, errors: 0
+2026-05-11 17:42:13,271 [INFO] feed_collector: DB Stats: {'raw_indicators': 3908, 'normalized_indicators': 3908, 'active_blocks': 957, 'audit_entries': 1476, 'high_risk_pending': 37}

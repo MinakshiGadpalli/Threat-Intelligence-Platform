@@ -1,0 +1,19 @@
+2026-05-11 17:42:17,692 [INFO] alert_manager: ============================================================
+2026-05-11 17:42:17,692 [INFO] alert_manager:   TIP Platform — Alert Manager (Week 4)
+2026-05-11 17:42:17,693 [INFO] alert_manager: ============================================================
+2026-05-11 17:42:17,714 [INFO] week1_osint.db_handler: ✅ Connected to MongoDB: threat_intel
+2026-05-11 17:42:17,715 [WARNING] alert_manager: No alert channels configured. Set alerts.email.enabled or alerts.slack.enabled in config.yaml
+2026-05-11 17:42:17,750 [WARNING] alert_manager: [ALERT] TIP Daily Summary — 2026-05-11
+Daily Threat Intelligence Summary
+========================================
+
+Total Indicators:   3,908
+Normalized:         3,908
+Active Blocks:      957
+Pending (High Risk): 993
+
+Severity Distribution:
+  MEDIUM    : 2,911
+  HIGH      : 997
+
+2026-05-11 17:42:17,750 [INFO] alert_manager: Daily summary sent
