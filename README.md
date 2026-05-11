@@ -225,44 +225,6 @@ sudo docker run -d --name tip_kibana -p 5601:5601 --link tip_elasticsearch:elast
 # 3. Start MongoDB
 sudo docker run -d --name tip_mongodb -p 27017:27017 mongo:6.0
 
-3. Setup Python Virtual Environment
-Bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-4. Configure File Permissions
-Ensure the system can write logs properly:
-
-Bash
-mkdir -p logs
-sudo chmod -R 777 logs/
-chmod +x run_auto_tip.sh
-
-💻 Usage
-Starting the Platform
-You can run the entire platform (from Data Collection to Firewall Enforcement) using the provided master script:
-
-Bash
-./run_auto_tip.sh
-Note: This script will launch the background daemons in separate terminal windows for live monitoring.
-
-Accessing the Dashboard
-Once the script is running, open your web browser and navigate to:
-
-Kibana Dashboard: http://localhost:5601
-
-Rollback / Unblocking an IP
-If you need to manually unblock a falsely flagged IP, use the Rollback Manager:
-
-Bash
-source venv/bin/activate
-python3 week4_dashboard/rollback_manager.py unblock <IP_ADDRESS> --actor "Admin" --reason "False Positive Investigation"
-Example: python3 week4_dashboard/rollback_manager.py unblock 100.29.192.86 --actor "Mitesh" --reason "Safe IP"
-
-
----
-
 ### Run the pipeline
 
 **Important: Always run all commands from the project root directory.**
@@ -364,6 +326,7 @@ Expected output: **27 passed, 9 subtests passed**
 
 📁 Folder Structure
 Plaintext
+
 threat-intelligence-platform/
 ├── config/
 │   ├── config.yaml          # Central configuration — add your API keys here
