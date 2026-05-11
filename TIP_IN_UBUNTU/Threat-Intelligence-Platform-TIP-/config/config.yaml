@@ -1,0 +1,93 @@
+# ============================================================
+#  TIP Platform - Central Configuration
+#  Fill in your API keys before running.
+#  See docs/API_SETUP.md for registration instructions.
+# ============================================================
+
+# --- API Keys ---
+apis:
+  alienvault_otx:
+    api_key: "7602f3ff6d01dcbe3956890d49b3fbcc50ee38364a68d14d915fd4ea9c78a2fc"          # https://otx.alienvault.com
+    base_url: "https://otx.alienvault.com/api/v1"
+    pulses_endpoint: "/pulses/subscribed"
+    enabled: true
+
+  abuseipdb:
+    api_key: "88c22e73528e9ffc9655d2da6dd2345992932be494e3fc4f355a5687689ea4d258e349de68f4e649"    # https://www.abuseipdb.com/api
+    base_url: "https://api.abuseipdb.com/api/v2"
+    enabled: true
+
+  urlhaus:
+    base_url: "https://urlhaus-api.abuse.ch/v1"
+    enabled: false   # URLhaus recently added auth — disable unless you have a token
+
+  virustotal:
+    api_key: "eefba9ed36371fd324c371d96a6499b5258cff14481e5103ba02fc713bc64197"   # https://www.virustotal.com (optional)
+    base_url: "https://www.virustotal.com/api/v3"
+    enabled: false
+
+# --- MongoDB ---
+mongodb:
+  host: "localhost"
+  port: 27017
+  database: "threat_intel"
+  collections:
+    raw_indicators: "raw_indicators"
+    normalized: "normalized_indicators"
+    blocked_ips: "blocked_ips"
+    audit_log: "audit_log"
+
+# --- Elasticsearch ---
+# IMPORTANT: Install correct library version:
+# pip install "elasticsearch==8.11.0" --break-system-packages
+elasticsearch:
+  host: "localhost"
+  port: 9200
+  scheme: "http"
+  username: ""
+  password: ""
+  verify_certs: false
+  index_prefix: "tip-"
+  indices:
+    threats: "tip-threats"
+    blocked: "tip-blocked"
+    audit: "tip-audit"
+
+# --- Kibana ---
+kibana:
+  host: "localhost"
+  port: 5601
+
+# --- Policy Enforcer ---
+enforcer:
+  enabled: true
+  dry_run: true        # Set to false to apply real iptables rules (requires sudo)
+  risk_threshold: 7
+  check_interval_seconds: 60
+  firewall_backend: "iptables"
+  whitelist:
+    - "127.0.0.1"
+    - "10.0.0.0/8"
+    - "192.168.0.0/16"
+    - "172.16.0.0/12"
+
+# --- Alerting ---
+alerts:
+  email:
+    enabled: false
+    smtp_host: "smtp.gmail.com"
+    smtp_port: 587
+    sender: "your_email@gmail.com"
+    password: "YOUR_APP_PASSWORD"
+    recipients:
+      - "soc_analyst@yourbank.com"
+  slack:
+    enabled: false
+    webhook_url: "YOUR_SLACK_WEBHOOK_URL"
+
+# --- Logging ---
+logging:
+  level: "INFO"
+  log_file: "logs/tip_platform.log"
+  max_bytes: 10485760
+  backup_count: 5
