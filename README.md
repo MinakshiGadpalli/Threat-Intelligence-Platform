@@ -1,6 +1,6 @@
 # 🚀 Threat Detection Platform
 
-A Cybersecurity Threat Detection Platform that collects, processes, and analyzes threat intelligence data using external APIs and stores it in a structured format for further analysis and visualization.This project is a beginner-friendly Threat Intelligence Platform (TIP) built using Python, MongoDB, and VirusTotal.It collects threat intelligence from VirusTotal, extracts malicious IP reputation data, removes duplicate entries, stores clean threat records, and performs risk scoring for security analysis.
+A Cybersecurity Threat Detection Platform that collects, processes, and analyzes threat intelligence data using external APIs and stores it in a structured format for further analysis and visualization. This project is a beginner-friendly Threat Intelligence Platform (TIP) built using Python, MongoDB, and VirusTotal. It collects threat intelligence from VirusTotal, extracts malicious IP reputation data, removes duplicate entries, stores clean threat records, and performs risk scoring for security analysis.
 
 The project is being developed in phases as part of an internship.
 
@@ -20,11 +20,13 @@ This project builds a complete threat intelligence pipeline:
 
 ## 🛠️ Tech Stack
 
-- **Language:** Python  
-- **Database:** MongoDB  
-- **API:** VirusTotal  
-- **Tools:** Git, VS Code  
-- **Libraries:** requests, pymongo, python-dotenv  
+| Category   | Tool/Technology                          |
+|------------|------------------------------------------|
+| Language   | Python                                   |
+| Database   | MongoDB                                  |
+| API        | VirusTotal                               |
+| Tools      | Git, VS Code                             |
+| Libraries  | requests, pymongo, python-dotenv         |
 
 ---
 
@@ -51,15 +53,16 @@ This project builds a complete threat intelligence pipeline:
 - SOC-style alert monitoring
 
 ### Week 4: Dashboard Visualization
--Flask-based dashboard
--Threat intelligence visualization
--Alert monitoring interface
--SOC-style dashboard tables
--Real-time threat monitoring
--MongoDB dashboard integration
--Web-based security monitoring system
--Threat and alert analytics display
+- Flask-based dashboard
+- Threat intelligence visualization
+- Alert monitoring interface
+- SOC-style dashboard tables
+- Real-time threat monitoring
+- MongoDB dashboard integration
+- Web-based security monitoring system
+- Threat and alert analytics display
   
+
 
 ---
 
@@ -67,18 +70,18 @@ This project builds a complete threat intelligence pipeline:
 
 ```
 Threat_detection/
-│── venv/
-│── config.py
-│── db.py
-│── fetch_threats.py
-│── risk_analysis.py
-│── normalize_data.py
-│── dashboard_data.py
-│── app.py
-│── alert_engine.py
-│── log_alerts.py
-│── requirements.txt
-│── .env
+├── venv/
+├── config.py
+├── db.py
+├── fetch_threats.py
+├── risk_analysis.py
+├── normalize_data.py
+├── dashboard_data.py
+├── app.py
+├── alert_engine.py
+├── log_alerts.py
+├── requirements.txt
+└── .env
 ```
 
 ---
@@ -86,129 +89,175 @@ Threat_detection/
 ## 🚀 Installation & Setup
 
 ### 1. Clone Repository
+
 ```bash
 git clone https://github.com/your-username/threat-detection-platform.git
 cd threat-detection-platform
 ```
 
-### 2. Create virtual environment 
+### 2. Create Virtual Environment
+
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
-### 3.Install Dependencies
+
+### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
+---
+
 ## 🔑 Environment Setup
+
+Create a `.env` file in the project root and add:
 
 ```
 VT_API_KEY=your_api_key_here
 ```
-### 🗄️MongoDB Setup
-- Install MongoDB Community Server
-- Start MongoDB service:
+
+---
+
+## 🗄️ MongoDB Setup
+
+1. Install MongoDB Community Server
+2. Start MongoDB service:
+
 ```bash
 net start MongoDB
 ```
-```bash
-- Default connection URL:mongodb://localhost:27017
-```
 
-## ▶️ how to run
+Default connection URL: `mongodb://localhost:27017`
+
+---
+
+## ▶️ How to Run
+
 **Step 1: Fetch Threat Data**
 ```bash
 python fetch_threats.py
 ```
+
 **Step 2: Run Risk Analysis**
 ```bash
-python fetch_threats.py
+python risk_analysis.py
 ```
+
 **Step 3: Normalize Data**
 ```bash
 python normalize_data.py
 ```
+
 **Step 4: Export Dashboard Data**
 ```bash
 python dashboard_data.py
 ```
-**📊 Sample Output**
+
+---
+
+## 📊 Sample Output
+
+```json
 {
   "ip": "8.8.8.8",
   "malicious_score": 0,
   "risk_level": "LOW",
   "timestamp": "2026-xx-xx"
 }
+```
 
-**🧠 Risk Scoring Logic**
+---
+
+## 🧠 Risk Scoring Logic
 
 | Malicious Score | Risk Level |
-| --------------- | ---------- |
+|-----------------|------------|
 | ≥ 5             | HIGH       |
 | ≥ 2             | MEDIUM     |
 | < 2             | LOW        |
 
-**✅ Completion Checklist**
+---
 
-- ✅Python environment setup
-- ✅MongoDB installed and running
-- ✅API integration working
-- ✅Threat data stored successfully
-- ✅Risk scoring implemented
-- ✅Data normalized
-- ✅Dashboard-ready output generated
+## ✅ Completion Checklist
 
+- ✅ Python environment setup
+- ✅ MongoDB installed and running
+- ✅ API integration working
+- ✅ Threat data stored successfully
+- ✅ Risk scoring implemented
+- ✅ Data normalized
+- ✅ Dashboard-ready output generated
 
-**🎯 Future Improvements**
+---
 
-- Add frontend dashboard 
+## 🎯 Future Improvements
+
+- Add frontend dashboard
 - Integrate more threat intelligence sources
 - Real-time threat monitoring
 - Alert/notification system
 
+---
+---
 
-
-# PROJECT IN UBUNTU 
-
-# 🛡️ Threat Intelligence Platform (TIP)
+# 🛡️ Threat Intelligence Platform (TIP) — Ubuntu Edition
 
 An end-to-end, automated Threat Intelligence Platform designed to fetch, process, and actively enforce security policies against malicious IPs. This project integrates OSINT feeds, a robust ELK Stack (Elasticsearch, Kibana) for SIEM visualization, MongoDB for raw data storage, and Linux `iptables` for active firewall enforcement.
 
+---
+
 ## 🚀 Features
 
-* **Automated OSINT Ingestion (Week 1):** Fetches real-time threat data from external feeds (e.g., AlienVault, AbuseIPDB).
-* **Data Normalization & SIEM Push (Week 2):** Parses raw JSON data and pushes it to Elasticsearch and MongoDB.
-* **Active Policy Enforcement (Week 3):** A background daemon that continuously scans for new threats and actively injects `DROP` rules into the Ubuntu firewall (`iptables`).
-* **Audit & Rollback Management (Week 4):** Live Kibana dashboards for visualization, alert management, and a CLI tool to manually unblock IPs with audit logging.
+- **Automated OSINT Ingestion (Week 1):** Fetches real-time threat data from external feeds (e.g., AlienVault, AbuseIPDB).
+- **Data Normalization & SIEM Push (Week 2):** Parses raw JSON data and pushes it to Elasticsearch and MongoDB.
+- **Active Policy Enforcement (Week 3):** A background daemon that continuously scans for new threats and actively injects `DROP` rules into the Ubuntu firewall (`iptables`).
+- **Audit & Rollback Management (Week 4):** Live Kibana dashboards for visualization, alert management, and a CLI tool to manually unblock IPs with audit logging.
 
 ---
 
-## ⚡ Quick Start
+## ⚡ Prerequisites
 
-### Prerequisites To run this project, you will need:
-- Ubuntu 
+To run this project, you will need:
+
+- Ubuntu OS
 - Docker + Docker Compose
-- Python 3.8 or higher version
-- 4GB RAM minimum (for Elasticsearch)
+- Python 3.8 or higher
+- 4 GB RAM minimum (for Elasticsearch)
+- Root privileges (required to modify `iptables` firewall rules)
 
-Root Privileges: Required to modify iptables firewall rules.
+---
 
 ## 🏗️ System Architecture
 
-<img width="1402" height="953" alt="system architecture" src="https://github.com/user-attachments/assets/55bc4d62-bc41-4a9c-9dcc-7cfd14c5aaa7" />
+![system architecture](https://github.com/user-attachments/assets/55bc4d62-bc41-4a9c-9dcc-7cfd14c5aaa7)
 
+```
+[AlienVault OTX]  ──┐
+[AbuseIPDB]       ──┼──► [feed_collector.py] ──► [MongoDB]
+[URLhaus]         ──┤                                │
+[VirusTotal]      ──┘                         [normalizer.py]
+                                                      │
+                                     [elk_pusher.py] ──► [Elasticsearch] ──► [Kibana :5601]
+                                                      │
+                                     [policy_daemon.py] ──► [iptables firewall rules]
+                                                      │
+                         [rollback_manager.py] + [alert_manager.py]
+```
 
+---
 
+## 🛠️ Installation & Setup
 
-**🛠️ Installation & Setup**
+### 1. Clone the Repository
 
-1. Clone the Repository
-Bash
-git clone [https://github.com/yourusername/Threat-Intelligence-Platform-TIP-.git](https://github.com/yourusername/Threat-Intelligence-Platform-TIP-.git)
+```bash
+git clone https://github.com/yourusername/Threat-Intelligence-Platform-TIP-.git
 cd Threat-Intelligence-Platform-TIP-
-2. Setup Docker Infrastructure
-The platform relies on MongoDB and the Elastic Stack. Run these commands to spin up the required containers:
+```
+
+### 2. Configure API Keys
 
 Add your free API keys to `config/config.yaml`:
 
@@ -216,29 +265,73 @@ Add your free API keys to `config/config.yaml`:
 nano config/config.yaml
 ```
 
-Fill in the following API keys (see `docs/API_SETUP.md` for full registration instructions):
+| API           | Key Field in config.yaml           | Where to Get It                        | Required    |
+|---------------|------------------------------------|----------------------------------------|-------------|
+| AlienVault OTX | `apis.alienvault_otx.api_key`     | https://otx.alienvault.com             | ✅ Yes      |
+| AbuseIPDB     | `apis.abuseipdb.api_key`           | https://www.abuseipdb.com/api          | ✅ Yes      |
+| VirusTotal    | `apis.virustotal.api_key`          | https://www.virustotal.com             | ⚪ Optional |
+| URLhaus       | No key needed                      | https://urlhaus.abuse.ch               | ⚪ Free     |
 
-| API | Key field in config.yaml | Where to get it | Required |
-|-----|--------------------------|-----------------|----------|
-| AlienVault OTX | `apis.alienvault_otx.api_key` | https://otx.alienvault.com | ✅ Yes |
-| AbuseIPDB | `apis.abuseipdb.api_key` | https://www.abuseipdb.com/api | ✅ Yes |
-| VirusTotal | `apis.virustotal.api_key` | https://www.virustotal.com | ⚪ Optional |
-| URLhaus | No key needed | https://urlhaus.abuse.ch | ⚪ Free/No key |
+### 3. Start Docker Infrastructure
 
-
-Bash
+```bash
 # 1. Start Elasticsearch
-sudo docker run -d --name tip_elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:8.11.1
+sudo docker run -d --name tip_elasticsearch \
+  -p 9200:9200 -p 9300:9300 \
+  -e "discovery.type=single-node" \
+  -e "xpack.security.enabled=false" \
+  docker.elastic.co/elasticsearch/elasticsearch:8.11.1
 
-# 2. Start Kibana (Linked to Elasticsearch)
-sudo docker run -d --name tip_kibana -p 5601:5601 --link tip_elasticsearch:elasticsearch docker.elastic.co/kibana/kibana:8.11.1
+# 2. Start Kibana (linked to Elasticsearch)
+sudo docker run -d --name tip_kibana \
+  -p 5601:5601 \
+  --link tip_elasticsearch:elasticsearch \
+  docker.elastic.co/kibana/kibana:8.11.1
 
 # 3. Start MongoDB
-sudo docker run -d --name tip_mongodb -p 27017:27017 mongo:6.0
+sudo docker run -d --name tip_mongodb \
+  -p 27017:27017 \
+  mongo:6.0
+```
 
-### Run the pipeline
+---
 
-**Important: Always run all commands from the project root directory.**
+## ▶️ Run the Pipeline
+
+**🪄 Magic Shortcut: start-tip**
+Instead of navigating to the project folder every time, you can create a global shortcut in your Linux terminal to start the entire platform from anywhere.
+
+**1. Open your bash configuration:**
+
+```bash
+nano ~/.bashrc
+```
+
+**2. Add the custom alias at the bottom of the file:**
+
+```bash
+alias start-tip="bash ~/Desktop/Threat-Intelligence-Platform-TIP-/run_auto_tip.sh"
+(Save: Ctrl+O, Enter, Ctrl+X)
+```
+
+**3. Apply the changes:**
+
+```bash
+source ~/.bashrc
+```
+
+**4. Start the platform from anywhere!**
+
+```bash
+start-tip
+```
+
+This script will launch the background daemons in separate terminal windows for live monitoring and automatically run the project and also test the IP unblock feature.
+
+
+**For Manually Run the Project go with these steps**
+
+> **Important:** Always run all commands from the project root directory.
 
 ```bash
 # Week 1 — Collect threat indicators from OSINT feeds (~2-3 minutes)
@@ -251,12 +344,12 @@ python3 normalizer.py
 python3 elk_pusher.py
 
 # Week 3 — Start the policy enforcement daemon (Ctrl+C to stop)
-python3 policy_daemon.py
+sudo python3 policy_daemon.py
 
 # Week 4 — List all blocked IPs
 python3 rollback_manager.py list
 
-# Week 4 — Unblock a specific IP (example)
+# Week 4 — Unblock a specific IP
 python3 rollback_manager.py unblock 105.247.69.196 --actor "SOC_Analyst"
 
 # Week 4 — View full audit history
@@ -265,7 +358,7 @@ python3 rollback_manager.py history
 
 ---
 
-### Open Kibana
+## 🖥️ Open Kibana Dashboard
 
 Navigate to: **http://localhost:5601**
 
@@ -292,14 +385,14 @@ Expected output: **27 passed, 9 subtests passed**
 | Command | Description |
 |---------|-------------|
 | `docker-compose up -d` | Start MongoDB + Elasticsearch + Kibana |
-| `docker-compose down` | Stop containers (data is preserved) |
+| `docker-compose down` | Stop containers (data preserved) |
 | `docker-compose down -v` | Stop containers and delete all data |
 | `python3 feed_collector.py` | Collect threat indicators |
 | `python3 normalizer.py` | Normalize and risk-score indicators |
 | `python3 elk_pusher.py` | Sync data to Elasticsearch/Kibana |
 | `sudo python3 policy_daemon.py` | Start firewall enforcement daemon |
 | `python3 rollback_manager.py list` | List all blocked IPs |
-| `python3 rollback_manager.py unblock 105.247.69.196 --actor "SOC_Analyst"` | Unblock a specific IP |
+| `python3 rollback_manager.py unblock <IP> --actor "Name"` | Unblock a specific IP |
 | `python3 rollback_manager.py history` | View full audit history |
 | `python3 rollback_manager.py reblock <IP> --actor "Name"` | Re-block an IP |
 | `python3 rollback_manager.py flush --actor "Name" --confirm` | Emergency unblock all IPs |
@@ -307,85 +400,61 @@ Expected output: **27 passed, 9 subtests passed**
 
 ---
 
-## 🏗️ Architecture
+## 📁 Folder Structure
 
 ```
-[AlienVault OTX]  ──┐
-[AbuseIPDB]       ──┼──► [feed_collector.py] ──► [MongoDB]
-[URLhaus]         ──┤                                │
-[VirusTotal]      ──┘                         [normalizer.py]
-                                                      │
-                                          [elk_pusher.py] ──► [Elasticsearch] ──► [Kibana :5601]
-                                                      │
-                                      [policy_daemon.py] ──► [iptables firewall rules]
-                                                      │
-                          [rollback_manager.py] + [alert_manager.py]
+threat-intelligence-platform/
+├── config/
+│   ├── config.yaml             # Central configuration — add your API keys here
+│   └── mongo-init.js           # MongoDB collection and index initialization
+├── feed_collector.py           # OSINT collectors: AlienVault OTX, AbuseIPDB, URLhaus
+├── db_handler.py               # MongoDB interface with deduplication and audit logging
+├── normalizer.py               # Risk scoring engine (0–10, CVSS v3 aligned)
+├── elk_pusher.py               # MongoDB → Elasticsearch sync for Kibana
+├── rule_engine.py              # iptables rule engine with whitelist and dry-run support
+├── policy_daemon.py            # Continuous enforcement daemon with signal handling
+├── rollback_manager.py         # CLI: list / unblock / reblock / flush / history
+├── alert_manager.py            # Email + Slack alerting with daily summaries
+├── kibana_dashboard.ndjson     # Import-ready Kibana 8.x dashboard
+├── tests/
+│   └── test_all.py             # 27 unit tests across all 4 weeks (all passing)
+├── docs/
+│   └── API_SETUP.md            # Free API registration guide
+├── docker-compose.yml          # MongoDB + Elasticsearch + Kibana stack
+├── logs/                       # Automated execution and error logs
+├── run_auto_tip.sh             # Master execution script
+├── requirements.txt            # Python dependencies
+└── README.md
 ```
 
 ---
 
 ## 📊 Expected Results
 
-| Metric | Value |
-|--------|-------|
-| Indicators collected | ~7,500–8,500 |
-| HIGH severity IPs | ~500 |
-| Unit tests passing | 27/27 |
-| Kibana dashboard | http://localhost:5601 |
+| Metric                   | Value                    |
+|--------------------------|--------------------------|
+| Indicators collected     | ~7,500–8,500             |
+| HIGH severity IPs        | ~500                     |
+| Unit tests passing       | 27/27                    |
+| Kibana dashboard         | http://localhost:5601    |
 
 ---
-
-📁 Folder Structure
-Plaintext
-
-threat-intelligence-platform/
-├── config/
-│   ├── config.yaml          # Central configuration — add your API keys here
-│   └── mongo-init.js        # MongoDB collection and index initialization
-├── feed_collector.py        # OSINT collectors: AlienVault OTX, AbuseIPDB, URLhaus
-├── db_handler.py            # MongoDB interface with deduplication and audit logging
-├── normalizer.py            # Risk scoring engine (0–10, CVSS v3 aligned)
-├── elk_pusher.py            # MongoDB → Elasticsearch sync for Kibana
-├── rule_engine.py           # iptables rule engine with whitelist and dry-run support
-├── policy_daemon.py         # Continuous enforcement daemon with signal handling
-├── rollback_manager.py      # CLI: list / unblock / reblock / flush / history
-├── alert_manager.py         # Email + Slack alerting with daily summaries
-├── kibana_dashboard.ndjson    # Import-ready Kibana 8.x dashboard
-├── tests/
-│   └── test_all.py            # 27 unit tests across all 4 weeks (all passing)
-├── docs/
-│   └── API_SETUP.md         # Free API registration guide
-├── docker-compose.yml       # MongoDB + Elasticsearch + Kibana stack
-├── logs/                    # Automated execution and error logs
-├── run_auto_tip.sh          # Master Execution Script
-├── requirements.txt         # Python dependencies
-└── README.md
-```
-
 
 ## 🔒 Security Notes
 
-- The policy daemon runs in `dry_run: true` mode by default — logs what would be blocked without applying real iptables rules
-- To enable live blocking, set `dry_run: false` in `config/config.yaml` and run with `sudo`
-- All block and unblock actions are recorded in a PCI-DSS compliant audit log
-- Private IP ranges (`10.x.x.x`, `192.168.x.x`, `172.16.x.x`, `127.x.x.x`) are always whitelisted
+- The policy daemon runs in `dry_run: true` mode by default — it logs what would be blocked without applying real `iptables` rules.
+- To enable live blocking, set `dry_run: false` in `config/config.yaml` and run with `sudo`.
+- All block and unblock actions are recorded in a PCI-DSS compliant audit log.
+- Private IP ranges (`10.x.x.x`, `192.168.x.x`, `172.16.x.x`, `127.x.x.x`) are always whitelisted.
 
 ---
 
-⚠️ Disclaimer
-This project modifies host firewall rules (iptables). It is highly recommended to run this in an isolated Virtual Machine (VM) rather than a primary host operating system to avoid accidental network lockouts.
+## ⚠️ Disclaimer
 
+This project modifies host firewall rules (`iptables`). It is highly recommended to run this in an isolated Virtual Machine (VM) rather than a primary host operating system to avoid accidental network lockouts.
 
+---
 
 ## 📄 License
 
 MIT License — free for educational and commercial use.
-
-
-
-
-
-
-
-
-
