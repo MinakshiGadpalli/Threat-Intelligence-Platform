@@ -1,4 +1,5 @@
-# 🚀 Threat Detection Platform
+# 🚀 Threat Intelligence Platform (TIP) — Windows Edition
+
 
 A Cybersecurity Threat Detection Platform that collects, processes, and analyzes threat intelligence data using external APIs and stores it in a structured format for further analysis and visualization. This project is a beginner-friendly Threat Intelligence Platform (TIP) built using Python, MongoDB, and VirusTotal. It collects threat intelligence from VirusTotal, extracts malicious IP reputation data, removes duplicate entries, stores clean threat records, and performs risk scoring for security analysis.
 
@@ -199,7 +200,6 @@ python dashboard_data.py
 - Real-time threat monitoring
 - Alert/notification system
 
----
 ---
 
 # 🛡️ Threat Intelligence Platform (TIP) — Ubuntu Edition
