@@ -158,7 +158,8 @@ python dashboard_data.py
 
 
 
-**PROJECT IN UBUNTU**
+# PROJECT IN UBUNTU 
+
 # 🛡️ Threat Intelligence Platform (TIP)
 
 An end-to-end, automated Threat Intelligence Platform designed to fetch, process, and actively enforce security policies against malicious IPs. This project integrates OSINT feeds, a robust ELK Stack (Elasticsearch, Kibana) for SIEM visualization, MongoDB for raw data storage, and Linux `iptables` for active firewall enforcement.
