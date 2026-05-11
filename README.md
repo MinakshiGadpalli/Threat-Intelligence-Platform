@@ -50,6 +50,17 @@ This project builds a complete threat intelligence pipeline:
 - MongoDB alert storage
 - SOC-style alert monitoring
 
+### Week 4: Dashboard Visualization
+-Flask-based dashboard
+-Threat intelligence visualization
+-Alert monitoring interface
+-SOC-style dashboard tables
+-Real-time threat monitoring
+-MongoDB dashboard integration
+-Web-based security monitoring system
+-Threat and alert analytics display
+  
+
 ---
 
 ## 📂 Project Structure
