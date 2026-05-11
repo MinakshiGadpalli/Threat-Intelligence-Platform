@@ -1,0 +1,32 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+week1_osint/venv/
+
+# Logs
+*.log
+logs/
+
+# Secrets
+.env
+.env.*
+
+# pytest
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
